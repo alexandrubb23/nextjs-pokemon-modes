@@ -13,7 +13,10 @@ export async function getStaticProps() {
     props: {
       pokemon: await response.json(),
     },
-    revalidate: 30,
+    // Revalidate is usefull if we don't update a page so offtem, for instance:
+    // osCommerce product detail page
+    // osCommerce home page and so on...
+    // revalidate: 30,
   };
 }
 
